@@ -125,30 +125,30 @@ We show the results for simulations A, B and C, following [Neves, Daniel and Ros
 
 ## A
 
-![Alt text](Animations/a.gif)
+![Alt text](Animations/a_preview.gif)
 
 ## B
 
-![Alt text](Animations/b.gif)
+![Alt text](Animations/b_preview.gif)
 
 ## C
 
-![Alt text](Animations/c.gif)
+![Alt text](Animations/c_preview.gif)
 
 
 We also show the same results as 2D heatmaps ([A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a_p.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b_p.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c_p.mp4) ) where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0.
 
 ## A
 
-![Alt text](Animations/a_p_2.gif)
+![Alt text](Animations/a_p_preview.gif)
 
 ## B
 
-![Alt text](Animations/b_p_2.gif)
+![Alt text](Animations/b_p_preview.gif)
 
 ## C
 
-![Alt text](Animations/c_p_2.gif)
+![Alt text](Animations/c_p_preview.gif)
 
 
 ## Authors
