@@ -132,7 +132,8 @@ We show the results for simulations A, B and C, following [Neves, Daniel and Ros
 
 ## C
 
-<video src="Animations/c.mp4" autoplay loop muted></video>
+<video src="https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c.mp4" autoplay loop muted></video>
+
 
 We also show the same results as 2D heatmaps where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0.
 
