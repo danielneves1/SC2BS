@@ -120,7 +120,7 @@ If the output data is already available one can simply run the file `images.sh` 
 
 ### Animations:
 
-We show the results for simulations A, B and C, following [Neves, Daniel and Rosa, João (2025)](https://doi:something), as animations in the GIF format which can be obtained in the `Animations` folder or clicking:
+We show the results for simulations A, B and C, following [Neves, Daniel and Rosa, João (2025)](https://doi:something), as animations in the GIF(or MP4) format which can be obtained in the `Animations` folder or clicking:
 [A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c.mp4). Note that the time step between frames is not constant, thus some parts of the animation can appear slowed down.
 
 ## A
@@ -129,11 +129,11 @@ We show the results for simulations A, B and C, following [Neves, Daniel and Ros
 
 ## B
 
-![Alt text](Animations/b.mp4)
+![Alt text](Animations/b.gif)
 
 ## C
 
-<video src="https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c.mp4" autoplay loop muted></video>
+![Alt text](Animations/c.gif)
 
 
 We also show the same results as 2D heatmaps where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0.
