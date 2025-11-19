@@ -1,0 +1,20 @@
+UnEven	** SpatialGridSpacing
+5000	** X array length
+0.001	** xi
+100.0	** xf
+99999999	** fraction of points for logscale
+
+UnEven	** TimeGridSpacing
+50000000	** Max Number of time points before evap.
+400	** Time array length after evap
+0.0	** initial instant
+60.0	** final instant
+0.0001	** K
+
+0.5	** AlfaRatio
+
+9999	** BH Initial Mass in kg
+9999	** BH Initial spin
+20.0	** BH time of evaporation
+
+9999	** Particle mass in GeV
