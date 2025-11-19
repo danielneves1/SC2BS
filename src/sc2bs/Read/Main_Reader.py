@@ -314,13 +314,13 @@ if __name__ == "__main__":
     file_in = args.input
     reduced = args.reduced
     try:
-        os.mkdir(file_out + "Gifs/norm")
+        os.makedirs(file_out + "Gifs/norm/", exist_ok=True)
     except FileExistsError:
 
         pass
         
     try:
-        os.mkdir(file_out + "Gifs/sqrd")
+        os.makedirs(file_out + "Gifs/sqrd/", exist_ok=True)
     except FileExistsError:
 
         pass
@@ -383,4 +383,5 @@ if __name__ == "__main__":
 
     #output_path = giflocation + "u.gif"  # Path to save the combined gif
     #concatenate_gifs(gif_paths, output_path)
+
 
