@@ -136,7 +136,7 @@ We show a preview of the results for simulations A, B and C, following [Neves, D
 ![Alt text](Animations/c_preview.gif)
 
 
-We also show the same preview results as 2D heatmaps ([A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a_p.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b_p.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c_p.mp4) ) where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0.
+We also show the same preview results as 2D heatmaps ([A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a_p.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b_p.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c_p.mp4) ) where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0, and the distances are shown in log-scale as represented by each gray circle.
 
 ## A
 
