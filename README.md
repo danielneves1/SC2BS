@@ -96,7 +96,7 @@ The simulation can be run as such
 ./run.sh
 ```
 
-although might need first to allow the use `run.sh` by using the following command on the terminal (inside the `run.sh` folder)
+although one might firstly need to allow the use of `run.sh` by using the following command on the terminal (inside the `run.sh` folder)
 
 ```
 chmod +x run.sh
