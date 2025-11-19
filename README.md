@@ -6,7 +6,7 @@ Numerical implementation of the time dependent Poisson-Schrödinger system for a
 
 ## Requirements
 
-This project requires `Fortran90` , `Python >= 3.12`, `pip`. The installation process is automated and all the dependencies are
+This project requires `git`, `Fortran90` , `Python >= 3.12`, `pip`. The installation process is automated and all the dependencies are
 installed if not yet available.
 
 ## Installation
@@ -56,13 +56,20 @@ python3 -m pip install -e sc2bs
 ## Usage
 ### How to run
 
-Edit the file `run.sh` with the desired inputs.
+First enter the folder directory
+
+```
+cd SC2BS
+
+```
+
+Then, edit the file `run.sh` with the desired inputs (or leave it as is for a first attempt).
 
 ```bash
 #x-grid properties
-xinitial=1e-4
+xinitial=1e-3
 xfinal=100
-ntotal=1000
+ntotal=4000
 
 #black hole + field initial conditions
 alpha_ratio=0.5  # Black hole to cloud mass ratio
@@ -83,11 +90,24 @@ reduced=False
 ```
 
 
-Then run as such
+The simulation can be run as such
 
 ```
 ./run.sh
 ```
+
+although might need first to allow the use `run.sh` by using the following command on the terminal (inside the `run.sh` folder)
+
+```
+chmod +x run.sh
+```
+
+Then run again 
+
+```
+./run.sh
+```
+
 which will generate an initial wave function, run the simulation and do some plots. This file assumes usage of the `gfortran` compiler which can be changed.
 
 
