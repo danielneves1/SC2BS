@@ -59,7 +59,10 @@ def energy_cycle(energy, xm, args):
             no_zeros = not(np.any((du_s[:-1] < 0) & (du_s[1:] > 0)) )
            # plt.plot(x_vals,u, label=f"{i=}")
             if u[-1]>0 and i==0:
-                print("ERR: Possibly energy too high")
+                print("ERR: Possibly energy is too high")
+                print("")
+                print("Modifiying initial energy guess")
+                print("...")
             if u[-1] > 0:
                 break
             
@@ -300,4 +303,5 @@ if __name__=="__main__":
     plt.xscale("log")
     plt.xlim(xi/10, 4*xinflection)
     plt.savefig("InitialWF.png")
+
 
