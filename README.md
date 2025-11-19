@@ -60,18 +60,18 @@ Edit the file `run.sh` with the desired inputs.
 
 ```bash
 #x-grid properties
-xinitial=1e-5 
+xinitial=1e-4
 xfinal=100
-ntotal=5000
+ntotal=1000
 
 #black hole + field initial conditions
-alpha_ratio=1.3   # Black hole to cloud mass ratio
-tau=200 #evaporation time
+alpha_ratio=0.5  # Black hole to cloud mass ratio
+tau=20 #evaporation time
 
 #time grid properties
 tinitial=0
-tfinal=300 #tfinal should be greater than tau
-time_steps=200 #notice that these time steps are only set after t=tau thus dt=(tfinal-tau)/time_steps
+tfinal=100 #tfinal should be greater than tau
+time_steps=400 #notice that these time steps are only set after t=tau thus dt=(tfinal-tau)/time_steps
 workers=1
 runs=1
 
