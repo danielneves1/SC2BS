@@ -8,9 +8,9 @@ file_in="./CrankNicolson/Input/"
 
 
 #x-grid properties
-xinitial=1e-4
+xinitial=1e-3
 xfinal=100
-ntotal=1000
+ntotal=4000
 
 #black hole + field initial conditions
 alpha_ratio=0.5  # Black hole to cloud mass ratio
