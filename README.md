@@ -2,7 +2,7 @@
 
 ## Description
 
-Numerical implementation of the time dependent Poisson-Schrödinger system for a field in the vicinity of an evaporating black-hole [Neves, Daniel and Rosa, João (2025)](https://doi:something). The numerical evolution of the equations are based on a modified Cranck-Nicholson described in [Ringhofer, C. and Soler, J. (1999)](https://doi.org/10.1016/S0893-9659(00)00072-0) and written in the `Fortran90` programming language. We supplement this numerical evolution with a numerical implementation, in `Python`, of an initial field configuration (to be evolved in time) alongside with methods to read and plot the resulting data. 
+Numerical implementation of the time dependent Poisson-Schrödinger system for a field in the vicinity of an evaporating black-hole[ [Neves, Daniel and Rosa, João (2025)](https://doi:something) ]. The numerical evolution of the equations are based on a modified Crank-Nicolson described in [Ringhofer, C. and Soler, J. (1999)](https://doi.org/10.1016/S0893-9659(00)00072-0) and written in the `Fortran90` programming language. We supplement this numerical evolution with a numerical implementation, in `Python`, of an initial field configuration (to be evolved in time) alongside with methods to read and plot the resulting data. 
 
 ## Requirements
 
@@ -117,18 +117,18 @@ The initial wave function generation methods are present in the `src/sc2bs/Initi
 ```
 python3 InitialWF/SelfConsistency_Method.py -alpha_ratio="$alpha_ratio" -ntotal="$ntotal" -xinitial="$xinitial" -xfinal="$xfinal" -dir="$file_in" -tau="$tau" -tinitial="$tinitial" -tfinal="$tfinal" -time_steps="$time_steps"
 ```
-This is will mainly output three files: `WF.txt`, `xpoints.txt` and `inp.txt` into the `src/sc2bs/CranckNicholson/Input` folder. Then, after compiling
+This is will mainly output three files: `WF.txt`, `xpoints.txt` and `inp.txt` into the `src/sc2bs/CrankNicolson/Input` folder. Then, after compiling
 
 ```
-gfortran -o CranckNicholson.exe variables.f90 cloud_potential.f90 ini.f90 Main.f90 math_methods.f90 predictor.f90 wave_function.f90 writers.f90 instants.f90  modulation.f90 -ffree-line-length-none
+gfortran -o CrankNicolson.exe variables.f90 cloud_potential.f90 ini.f90 Main.f90 math_methods.f90 predictor.f90 wave_function.f90 writers.f90 instants.f90  modulation.f90 -ffree-line-length-none
 ```
 
 the time evolution of the initial wave function in `WF.txt` on a x-grid defined by `xpoints.txt` is obtained by running the executable
 
 ```
-./CranckNicholson.exe
+./CrankNicolson.exe
 ```
-Notice that the file `inp.txt`, from which the executable reads, has the remaining information for the system. After the simulation has ended, the outputs can be checked inside the folder `src/sc2bs/CranckNicholson/Output`, which can be plotted using the methods provided in `src/sc2bs/Read/`. For further information please read carefully the `run.sh`.
+Notice that the file `inp.txt`, from which the executable reads, has the remaining information for the system. After the simulation has ended, the outputs can be checked inside the folder `src/sc2bs/CrankNicolson/Output`, which can be plotted using the methods provided in `src/sc2bs/Read/`. For further information please read carefully the `run.sh`.
 
 
 If the output data is already available one can simply run the file `images.sh` to only do the plots:
