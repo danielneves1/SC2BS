@@ -145,15 +145,15 @@ We show(on the Left) a preview of the results for simulations A, B and C, follow
 
 ## Simulation A
 
-![Alt text](Animations/A_preview.gif) ![Alt text](Animations/A_2D_preview.gif)
+![Alt text](Animations/A_preview.gif) ![Alt text](Animations/A_2D__preview.gif)
 
 ## Simulation B
 
-![Alt text](Animations/B_preview.gif) ![Alt text](Animations/B_2D_preview.gif)
+![Alt text](Animations/B_preview.gif) ![Alt text](Animations/B_2D__preview.gif)
 
 ## Simulation C
 
-![Alt text](Animations/C_preview.gif) ![Alt text](Animations/C_2D_preview.gif)
+![Alt text](Animations/C_preview.gif) ![Alt text](Animations/C_2D__preview.gif)
 
 
 
