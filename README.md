@@ -2,7 +2,7 @@
 
 ## Description
 
-Numerical implementation of the time dependent Poisson-Schrödinger system for a field in the vicinity of an evaporating black-hole[ [Neves, Daniel and Rosa, João (2025)](https://doi:something) ]. The numerical evolution of the equations are based on a modified Crank-Nicolson described in [Ringhofer, C. and Soler, J. (1999)](https://doi.org/10.1016/S0893-9659(00)00072-0) and written in the `Fortran90` programming language. We supplement this numerical evolution with a numerical implementation, in `Python`, of an initial field configuration (to be evolved in time) alongside with methods to read and plot the resulting data. 
+Numerical implementation of the time dependent Poisson-Schrödinger system for a field in the vicinity of an evaporating black-hole [[Neves, Daniel and Rosa, João (2025)](https://doi:something)]. The numerical evolution of the equations are based on a modified Crank-Nicolson described in [Ringhofer, C. and Soler, J. (1999)](https://doi.org/10.1016/S0893-9659(00)00072-0) and written in the `Fortran90` programming language. We supplement this numerical evolution with a numerical implementation, in `Python`, of an initial field configuration (to be evolved in time) alongside with methods to read and plot the resulting data. 
 
 ## Requirements
 
