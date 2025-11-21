@@ -140,8 +140,8 @@ If the output data is already available one can simply run the file `images.sh` 
 
 ### Animations:
 
-We show a preview of the results for simulations A, B and C, following [Neves, Daniel and Rosa, João (2025)](https://doi:something), as animations in the GIF(or MP4) format which can be downloaded fully inside the `Animations` folder or simply by clicking:
-[A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c.mp4). Note that the time step between frames is not constant, thus some parts of the animation can appear slowed down.
+We show(on the Left) a preview of the results for simulations A, B and C, following [Neves, Daniel and Rosa, João (2025)](https://doi:something), as animations in the GIF(or MP4) format which can be downloaded fully inside the `Animations` folder or simply by clicking:
+[A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c.mp4). Note that the time step between frames is not constant, thus some parts of the animation can appear slowed down. We also show (on the Right) the same preview results as 2D heatmaps ([A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a_p.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b_p.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c_p.mp4) ) where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0, and the distances are shown in log-scale as represented by each gray circle.
 
 ## Simulation A
 
@@ -156,17 +156,6 @@ We show a preview of the results for simulations A, B and C, following [Neves, D
 ![Alt text](Animations/c_preview.gif) ![Alt text](Animations/c_p_preview.gif)
 
 
-We also show the same preview results as 2D heatmaps ([A](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/a_p.mp4), [B](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/b_p.mp4), [C](https://raw.githubusercontent.com/danielneves1/SC2BS/main/Animations/c_p.mp4) ) where, at each instant, we normalise the field's value by its maximum value. The colour scheme is such that Yellow corresponds to 1 while Blue corresponds to 0, and the distances are shown in log-scale as represented by each gray circle.
-
-## A
-
-
-
-## B
-
-
-
-## C
 
 
 
