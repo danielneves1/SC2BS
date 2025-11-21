@@ -145,7 +145,7 @@ We show a preview of the results for simulations A, B and C, following [Neves, D
 
 ## A
 
-![Alt text](Animations/a_preview.gif)
+![Alt text](Animations/a_preview.gif) ![Alt text](Animations/a_p_preview.gif)
 
 ## B
 
@@ -160,7 +160,7 @@ We also show the same preview results as 2D heatmaps ([A](https://raw.githubuser
 
 ## A
 
-![Alt text](Animations/a_p_preview.gif)
+
 
 ## B
 
