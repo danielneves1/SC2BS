@@ -170,18 +170,24 @@ Implicit none
 	real*8 , dimension(llenx),intent(out):: gg
         Integer, intent(in):: llenx 
 	integer::i
-	real*8 :: a,b,c
-
+	real*8 :: a,b,c, delta_x
+	delta_x = x(3)-x(2)
 	do i=2, llenx-1
-		a = ( 2*x(i) - x( i ) - x(i+1) ) / ( (x(i-1) - x( i )) * (x(i-1) - x(i+1)))
-		b = ( 2*x(i) - x(i-1) - x(i+1) ) / ( (x( i ) - x(i-1)) * (x(i)   - x(i+1)))
-		c = ( 2*x(i) - x(i-1) - x( i ) ) / ( (x(i+1) - x(i-1)) * (x(i+1) - x( i )))
-
-
-		gg(i) =  a*wf(i-1) + b*wf(i) +c*wf(i+1) 
+		!a = ( 2*x(i) - x( i ) - x(i+1) ) / ( (x(i-1) - x( i )) * (x(i-1) - x(i+1)))
+		!b = ( 2*x(i) - x(i-1) - x(i+1) ) / ( (x( i ) - x(i-1)) * (x(i)   - x(i+1)))
+		!c = ( 2*x(i) - x(i-1) - x( i ) ) / ( (x(i+1) - x(i-1)) * (x(i+1) - x( i )))
+		!gg(i) =  a*wf(i-1) + b*wf(i) +c*wf(i+1) 
+		gg(i) = (-wf(i+2)+8*wf(i+1)-wf(i-1)*8+wf(i-2))/(12 * delta_x )
 	enddo
-	gg(1)=gg(2)
-        gg(llenx)=gg(llenx-1)
+	gg(1) = (-25*wf(1) + 48*wf(2) - 36*wf(3) + 16*wf(4) - 3*wf(5)) / (12d0 * delta_x )
+	gg(2) = (-3*wf(1) - 10*wf(2) + 18*wf(3) - 6*wf(4) + wf(5)) / (12d0 * delta_x )
+
+
+gg(llenx-1) = ( 3*wf(llenx) + 10*wf(llenx-1) - 18*wf(llenx-2) + 6*wf(llenx-3) - wf(llenx-4) ) / &
+              (12d0* delta_x )
+
+gg(llenx) = ( 25*wf(llenx) - 48*wf(llenx-1) + 36*wf(llenx-2) - 16*wf(llenx-3) + 3*wf(llenx-4) ) / &
+            (12d0* delta_x)
 
 
 End Subroutine grad
@@ -196,20 +202,28 @@ Implicit none
 	complex*16 , dimension(llenx),intent(out):: gg
         Integer, intent(in):: llenx 
 	integer::i
-	real*8:: a,b,c
-
+	real*8:: a,b,c,delta_x
+delta_x= x(3)-x(2)
 	do i=3, llenx-2
-		a = ( 2*x(i) - x( i ) - x(i+1) ) / ( (x(i-1) - x( i )) * (x(i-1) - x(i+1)))
-		b = ( 2*x(i) - x(i-1) - x(i+1) ) / ( (x( i ) - x(i-1)) * (x(i)   - x(i+1)))
-		c = ( 2*x(i) - x(i-1) - x( i ) ) / ( (x(i+1) - x(i-1)) * (x(i+1) - x( i )))
+		!a = ( 2*x(i) - x( i ) - x(i+1) ) / ( (x(i-1) - x( i )) * (x(i-1) - x(i+1)))
+		!b = ( 2*x(i) - x(i-1) - x(i+1) ) / ( (x( i ) - x(i-1)) * (x(i)   - x(i+1)))
+		!c = ( 2*x(i) - x(i-1) - x( i ) ) / ( (x(i+1) - x(i-1)) * (x(i+1) - x( i )))
 		!gg(i)=  a*wf(i-1) + b*wf(i) +c*wf(i+1) 
 
 		!gg(i) = wf(i+1)-wf(i)/(x(i+1)-x(i))
 		gg(i) = (-wf(i+2)+8*wf(i+1)-wf(i-1)*8+wf(i-2))/(12*( x(i+1)-x(i) ))
 	enddo
 	
-	gg(1)=wf(1)/x(1)
-        gg(llenx)=gg(llenx-1)
+	gg(1) = (-25*wf(1) + 48*wf(2) - 36*wf(3) + 16*wf(4) - 3*wf(5)) / (12d0 * delta_x )
+	gg(2) = (-3*wf(1) - 10*wf(2) + 18*wf(3) - 6*wf(4) + wf(5)) / (12d0 * delta_x )
+
+
+	gg(llenx-1) = ( 3*wf(llenx) + 10*wf(llenx-1) - 18*wf(llenx-2) + 6*wf(llenx-3) - wf(llenx-4) ) / &
+              (12d0* delta_x )
+
+	gg(llenx) = ( 25*wf(llenx) - 48*wf(llenx-1) + 36*wf(llenx-2) - 16*wf(llenx-3) + 3*wf(llenx-4) ) / &
+            (12d0* delta_x)
+
 
 End Subroutine gradc
 
@@ -281,6 +295,7 @@ Implicit none
 	vector(1) = 0!d(1)*x(1)+t(1)*x(2)
 	vector(llenx) = 0!s(llenx)*x(llenx-1)+d(llenx)*x(llenx) 
 	
+
 End Subroutine tridiag_mult_real
 
 !*************************************************************************/
