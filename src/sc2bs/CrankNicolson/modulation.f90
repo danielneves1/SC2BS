@@ -45,9 +45,10 @@ real*8:: energy_test, tolerance, norm_test, energy_loss, potdiff, energy_test1, 
 
 !allocate(psi_test(lenx), psi_testold(lenx), V_test(lenx))
 
+
 psi_test = psi_k2
 V_test = V_k2
-maxiter=100
+maxiter=500
 
 
 do iters=1, maxiter 
@@ -57,17 +58,18 @@ do iters=1, maxiter
 	
 
 	call wf(psi_test, (V_test + V_k)/x/2 + pot_r)
+	
 	call CloudPotential(V_test, psi_test)
-
+	
+	call integrate(abs(psi_test)**2, x, lenx, norm_test)
+	psi_test = psi_test/ sqrt(norm_test)
 
 	call gradc(wf_grad, psi_test/x, x, lenx)
-	call integrate((abs(wf_grad)**2 - (V_test/2 + alfaratio_t(it+1)) /x * abs(psi_test/x)**2.0)*x**2, x, lenx, energy_test)
-
 	
 	!Convergence Condition Evaluation
 	call integrate(abs(psi_test-psi_testold), x, lenx, tolerance)
 	
-	call integrate(abs(psi_test)**2, x, lenx, norm_test)
+	
 	
 !Make it so that at least one refinement is done
 !Convergence Condition
@@ -76,7 +78,8 @@ if ( iters>1.and.tolerance<1e-12) then
 
 	psi_k = psi_test
 	V_k = V_test
-	energy = energy_test
+	call integrate((abs(wf_grad)**2 - (V_test/2 + alfaratio_t(it+1)) /x * abs(psi_test/x)**2.0)*x**2, x, lenx, energy)
+	!energy = energy_test
 	norm = norm_test
 	return
 endif
