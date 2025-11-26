@@ -107,8 +107,8 @@ do it=1, lent-1
 	!##################################  Modulation Scheme  #############################################
 	!####################################################################################################
 
-		! Modulate the wave function
-		call Modulation()
+		! Modulate the wave function #the self-consistent method does not require this step
+		!call Modulation()
 	
 		! Refine the solution through a self-consistency cycle
 		call self_consistent()
@@ -158,4 +158,5 @@ do i=1,lenx
 enddo
 
 444 END PROGRAM CrankNicolson
+
 
