@@ -57,7 +57,7 @@ do iters=1, maxiter
 	V_testold = V_test
 	
 
-	call wf(psi_test, (V_test + V_k)/x/2 + pot_r)
+	call wf(psi_test, (V_test + V_k + alfaratio_t(it+1) + alfaratio_t(it))/x/2)
 	
 	call CloudPotential(V_test, psi_test)
 	
@@ -96,3 +96,4 @@ enddo
 
 
 end Subroutine self_consistent
+
